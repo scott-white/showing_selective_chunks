@@ -1,0 +1,29 @@
+---
+title: "Master Files"
+author: "Scott White"
+date: "02/05/2019"
+output: pdf_document
+params:
+  show_code: false
+---
+
+# Question 1
+
+```{r q1, echo = params$show_code}
+x = rnorm(100)
+y = rnorm(100)
+plot(x, y)
+```
+
+
+# Question 2
+
+```{r q2, echo = params$show_code}
+x = rnorm(100, 10)
+y = rnorm(100, 10)
+plot(x, y)
+```
+
+Rscript -e "rmarkdown::render('master_file.Rmd', output_file = 'questions.pdf', params = list(show_code = FALSE))"
+
+Rscript -e "rmarkdown::render('master_file.Rmd', output_file = 'answers.pdf', params = list(show_code = TRUE))"
