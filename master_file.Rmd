@@ -23,7 +23,3 @@ x = rnorm(100, 10)
 y = rnorm(100, 10)
 plot(x, y)
 ```
-
-Rscript -e "rmarkdown::render('master_file.Rmd', output_file = 'questions.pdf', params = list(show_code = FALSE))"
-
-Rscript -e "rmarkdown::render('master_file.Rmd', output_file = 'answers.pdf', params = list(show_code = TRUE))"
